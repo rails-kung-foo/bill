@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def display_head_title
+  def display_page_title
     t("layouts.#{ controller.controller_name }.page_title")
   end
 
