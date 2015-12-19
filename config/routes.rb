@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get "/invoices/:page" => "invoices#show"
+  match '/bill',  to: 'invoices#show',  via: 'get' 
 
   root  'invoices#show'
-  
+
   match '*path' => redirect('/'), via: :get
 end
