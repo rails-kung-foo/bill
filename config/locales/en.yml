@@ -24,7 +24,13 @@ en:
     invoices:
       page_title: Sky TV & Broadband | Your Billing
       bill_details: "Your Sky Bill for the period: %{from} - %{to}"
-      total_bill_cost: Your Total cost is 
+      total_bill_cost: Your Total cost is
+      something_went_wrong: Something went wrong
+      rental: Rentals
+      buyAndKeep: Buy and Keep
+      tv: TV
+      talk: Talk
+      broadband: BroadBand
   time:
     formats:
       time: ! '%H:%M'

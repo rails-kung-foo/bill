@@ -1,0 +1,4 @@
+<% product['calls'].each do |item| %>
+  <%= render 'invoices/shared/item_list', title: item['called'],
+        sub_title: item['duration'], amount: to_currency(item['cost']) %>
+<% end %>

@@ -8,20 +8,31 @@
   </div>
   <hr />
 
-  <div class="row">
-    <div class="col-md-1 detailBox">
-      <div class="">
+  <div class="container-fluid">
+    <div class="row">
+      <% @invoice_json.each do |key, product|  %>
+        <% next unless is_part_of_bill?(key) %>
 
-      </div>
-      <div class="">
+        <div class="col-md-1 detailBox">
+          <div class="productTitle">
+            <p>
+              <%= key.titleize %>
+              <span class="right bold">
+                <%= to_currency(product['total']) %>
+              </span>
 
-      </div>
+            </p>
+          </div>
+          <div class="productItemsBox">
+            <ul>
+              <%= render "item_details_#{ key.underscore }", product: product %>
+            </ul>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 
-  <%= @invoice_json.reject{|key| ['statement', 'total'].include? key } %>
-
 <% else %>
-
-  <%= @invoice.code %>
+  <%= t('layouts.invoices.something_went_wrong') %>
 <% end %>
