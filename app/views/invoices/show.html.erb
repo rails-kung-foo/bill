@@ -1,2 +1,21 @@
+<% if @invoice.code == '200' %>
+  <div class="">
+    <p><%= display_bill_period %></p>
+  </div>
+  <hr />
 
-<%= JSON.parse @invoice.body %>
+  <div class="row">
+    <div class="col-md-1">
+
+      <div class="">
+        
+      </div>
+    </div>
+  </div>
+
+  <%= @invoice_json.reject{|key| ['statement'].include? key } %>
+
+<% else %>
+
+  <%= @invoice.code %>
+<% end %>
