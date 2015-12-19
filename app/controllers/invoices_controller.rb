@@ -1,6 +1,7 @@
 class InvoicesController < ApplicationController
   def show
     @invoice = CustomersBill.new(customer_bill_params).get_bill
+    @invoice_json = JSON.parse(@invoice.body) if @invoice.code == '200'
   end
 
   protected
