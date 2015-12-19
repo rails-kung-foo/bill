@@ -7,7 +7,6 @@
     </p>
   </div>
   <hr />
-
   <div class="container-fluid">
     <div class="row">
       <% @invoice_json.each do |key, product|  %>
@@ -20,7 +19,6 @@
               <span class="right bold">
                 <%= to_currency(product['total']) %>
               </span>
-
             </p>
           </div>
           <div class="productItemsBox">
@@ -32,7 +30,6 @@
       <% end %>
     </div>
   </div>
-
 <% else %>
   <%= t('layouts.invoices.something_went_wrong') %>
 <% end %>
