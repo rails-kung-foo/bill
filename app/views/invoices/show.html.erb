@@ -1,19 +1,25 @@
 <% if @invoice.code == '200' %>
   <div class="">
     <p><%= display_bill_period %></p>
+    <p>
+      <%= t('layouts.invoices.total_bill_cost') %>
+      <strong><%= total_to_currency %></strong>
+    </p>
   </div>
   <hr />
 
   <div class="row">
-    <div class="col-md-1">
-
+    <div class="col-md-1 detailBox">
       <div class="">
-        
+
+      </div>
+      <div class="">
+
       </div>
     </div>
   </div>
 
-  <%= @invoice_json.reject{|key| ['statement'].include? key } %>
+  <%= @invoice_json.reject{|key| ['statement', 'total'].include? key } %>
 
 <% else %>
 
