@@ -1,3 +1,10 @@
+// Global rules
+body {
+  .left { float: left; }
+  .right { float: right; }
+  .bold { font-weight: bold; }
+}
+
 // Header
 nav.navbar.navbar-inverse {
   background-color: #fff;
@@ -40,3 +47,5 @@ nav.navbar.navbar-inverse {
     }
   }
 }
+
+// invoice table
