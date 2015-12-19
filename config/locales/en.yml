@@ -20,7 +20,24 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-
   layouts:
     invoices:
       page_title: Sky TV & Broadband | Your Billing
+      main_titel: Welcome to Sky Billing
+      bill_details: "Your bill for the period: %{from} - %{to}"
+      total_bill_cost: Your Total cost is
+      something_went_wrong: Something went wrong
+      rentals: Rentals
+      buyAndKeep: Buy and Keep
+      tv: TV
+      talk: Talk
+      broadband: BroadBand
+  time:
+    formats:
+      time: ! '%H:%M'
+      date: ! '%d/%m/%Y'
+      datetime: ! '%d/%m/%Y %H:%M'
+  date:
+    formats:
+      date: ! '%d/%m/%Y'
+      datetime: ! '%d/%m/%Y %H:%M'

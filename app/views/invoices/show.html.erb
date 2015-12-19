@@ -1,2 +1,46 @@
+<div class="mainTitle">
+  <%= t('layouts.invoices.main_titel') %>
+</div>
 
-<%= JSON.parse @invoice.body %>
+<hr />
+
+<% if @invoice.code == '200' %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 detailBox">
+        <div class="detailBoxContent">
+          <p>
+            <%= display_bill_period %></p>
+          <p>
+            <%= t('layouts.invoices.total_bill_cost') %>
+            <strong><%= total_to_currency %></strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 detailBox">
+        <% @invoice_json.each do |key, product|  %>
+          <% next unless is_part_of_bill?(key) %>
+
+          <div class="detailBoxContent toggleSlideEffect">
+            <div class="productTitle">
+              <a href="#">
+                <%= key.titleize %>
+                <span class="right bold totalAmount amount">
+                  <%= amount_to_currency(product['total']) %>
+                </span>
+              </a>
+            </div>
+            <div class="productItemsBox jsHidden toggleSlideTarget">
+              <ul class="list-group">
+                <%= render "item_details_#{ key.underscore }", product: product %>
+              </ul>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <%= t('layouts.invoices.something_went_wrong') %>
+<% end %>
