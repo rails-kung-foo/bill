@@ -13,11 +13,11 @@ module InvoicesHelper
   end
 
   # Formats amount to currency
-  def to_currency(number)
+  def amount_to_currency(number)
     number_to_currency(number.to_i, { unit: '£' })
   end
 
-  # Removes total from product. Used for sky store partial
+  # Removes the attribute total from a product. Used for sky store partial
   def reject_total(array)
     array.reject{ |string| string == 'total' }
   end
