@@ -23,7 +23,7 @@ en:
   layouts:
     invoices:
       page_title: Sky TV & Broadband | Your Billing
-      main_titel: Your Sky bill
+      main_titel: Welcome to Sky Billing
       bill_details: "Your bill for the period: %{from} - %{to}"
       total_bill_cost: Your Total cost is
       something_went_wrong: Something went wrong
