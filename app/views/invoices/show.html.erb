@@ -1,33 +1,41 @@
 <% if @invoice.code == '200' %>
-  <div class="">
-    <p><%= display_bill_period %></p>
-    <p>
-      <%= t('layouts.invoices.total_bill_cost') %>
-      <strong><%= total_to_currency %></strong>
-    </p>
+  <div class="mainTitle">
+    <%= t('layouts.invoices.main_titel') %>
   </div>
   <hr />
   <div class="container-fluid">
     <div class="row">
-      <% @invoice_json.each do |key, product|  %>
-        <% next unless is_part_of_bill?(key) %>
-
-        <div class="col-md-1 detailBox">
-          <div class="productTitle">
-            <p>
-              <%= key.titleize %>
-              <span class="right bold">
-                <%= to_currency(product['total']) %>
-              </span>
-            </p>
-          </div>
-          <div class="productItemsBox">
-            <ul>
-              <%= render "item_details_#{ key.underscore }", product: product %>
-            </ul>
-          </div>
+      <div class="col-md-6 detailBox">
+        <div class="detailBoxContent">
+          <p><%= display_bill_period %></p>
+          <p>
+            <%= t('layouts.invoices.total_bill_cost') %>
+            <strong><%= total_to_currency %></strong>
+          </p>
         </div>
-      <% end %>
+      </div>
+
+      <div class="col-md-6 detailBox">
+        <% @invoice_json.each do |key, product|  %>
+          <% next unless is_part_of_bill?(key) %>
+
+          <div class="detailBoxContent toggleSlideEffect">
+            <div class="productTitle">
+              <a href="#">
+                <%= key.titleize %>
+                <span class="right bold totalAmount amount">
+                  <%= to_currency(product['total']) %>
+                </span>
+              </a>
+            </div>
+            <div class="productItemsBox jsHidden toggleSlideTarget">
+              <ul class="list-group">
+                <%= render "item_details_#{ key.underscore }", product: product %>
+              </ul>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 <% else %>

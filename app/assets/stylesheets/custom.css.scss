@@ -1,11 +1,19 @@
-// Global rules
 body {
+  // Global rules
   .left { float: left; }
   .right { float: right; }
   .bold { font-weight: bold; }
+  .hidden { display: none; }
+
+  // non js browser compatibility
+  &.jsInitial {
+    .jsHidden {
+      display: none;
+    }
+  }
 }
 
-// Header
+// Header, Navi, Logo
 nav.navbar.navbar-inverse {
   background-color: #fff;
 
@@ -48,4 +56,65 @@ nav.navbar.navbar-inverse {
   }
 }
 
-// invoice table
+// invoice list items
+.detailBox {
+  .detailBoxContent {
+    padding: 5px 15px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 2px #333, inset 0px 0px 6px #666;
+    margin-bottom: 20px;
+  }
+
+  // UL list of items
+  .productItemsBox {
+    li {
+      overflow: hidden;
+
+      &:hover { background-color: mistyrose; }
+
+      p { margin: 0; }
+
+      .subTitle {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        background-color: plum;
+        width: 100px;
+        text-align: center;
+        border-radius: 4px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 700;
+        box-shadow: 0px 1px 5px 0px #333;
+
+        &.colorCode-tv { background-color: yellow }
+        &.colorCode-talk { background-color: tan }
+        &.colorCode-broadband { background-color: sandybrown }
+        &.colorCode-rentals { background-color: skyblue }
+        &.colorCode-buy-and-keep { background-color: bisque }
+
+      }
+    }
+  }
+
+  .productTitle {
+    font-size: 22px;
+
+    a {
+      display: block;
+      text-shadow: 0px 1px 2px #888;
+      font-weight: bold;
+
+      &:hover,
+      &:focus {
+        color: blueviolet;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .amount {
+    font-family: monospace;
+  }
+}

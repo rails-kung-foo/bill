@@ -1,9 +1,19 @@
-<li>
-  <p>
+<li class="list-group-item">
+  <div>
+    <% if local_assigns[:sub_title] %>
+      <em class="subTitle<%= " colorCode-#{ sub_title.parameterize }" %>">
+        <%= sub_title %>
+      </em>
+    <% end %>
+
     <span class="itemTitle">
       <%= title %>
     </span>
-    <em><%= sub_title %></em>
-    <span class="right bold"><%= amount %></span>
-  </p>
+
+    <% if local_assigns[:call_duration] %>
+      <em><%= call_duration %></em>
+    <% end %>
+
+    <span class="right bold amount"><%= amount %></span>
+  </div>
 </li>
