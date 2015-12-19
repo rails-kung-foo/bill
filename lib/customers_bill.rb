@@ -18,7 +18,7 @@ class CustomersBill
     "#{ SKY_BILLING_URI }#{ billing_file }"
   end
 
-  # CHeck if uri is https and returns boolean. Used to set http.use_ssl
+  # CHeck if URI is https and returns boolean. Used to set http.use_ssl
   def is_uri_https?(uri_scheme)
     uri_scheme == 'https'
   end
