@@ -24,12 +24,10 @@
 
           <div class="detailBoxContent toggleSlideEffect">
             <div class="productTitle">
-              <a href="#">
-                <%= key.titleize %>
-                <span class="right bold totalAmount amount">
-                  <%= amount_to_currency(product['total']) %>
-                </span>
-              </a>
+              <%= key.titleize %>
+              <span class="right bold totalAmount amount">
+                <%= amount_to_currency(product['total']) %>
+              </span>
             </div>
             <div class="productItemsBox jsHidden toggleSlideTarget">
               <ul class="list-group">
