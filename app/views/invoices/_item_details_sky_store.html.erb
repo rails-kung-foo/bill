@@ -1,6 +1,6 @@
 <% reject_total(product.keys).each do |key|  %>
   <% product[key].each do |item| %>
     <%= render 'invoices/shared/item_list', title: item['title'],
-          sub_title: t("layouts.invoices.#{ key }"), amount: amount_to_currency(item['cost']) %>
+          sub_title: t("product_types.#{ key }"), amount: amount_to_currency(item['cost']) %>
   <% end %>
 <% end %>
