@@ -18,9 +18,36 @@
   },
   "callCharges": {
     "calls": [
-      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 }
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "07716393769", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "02074351359", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "02074351359", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "02074351359", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "02074351359", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "02074351359", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "02074351359", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "02074351359", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "02074351359", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "02074351359", "duration": "00:23:03", "cost": 2.13 },
+      { "called": "02074351359", "duration": "00:23:03", "cost": 2.13 }
     ],
-    "total": 2.13
+    "total": 59.64
   },
   "skyStore": {
     "rentals": [
