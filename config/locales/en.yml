@@ -27,11 +27,12 @@ en:
       bill_details: "Your bill for the period: %{from} - %{to}"
       total_bill_cost: Your Total cost is
       something_went_wrong: Something went wrong
-      rentals: Rentals
-      buyAndKeep: Buy and Keep
-      tv: TV
-      talk: Talk
-      broadband: BroadBand
+  product_types:
+    rentals: Rentals
+    buyAndKeep: Buy and Keep
+    tv: TV
+    talk: Talk
+    broadband: BroadBand
   time:
     formats:
       time: ! '%H:%M'

@@ -1,5 +1,7 @@
 <li class="list-group-item">
   <div>
+
+    <% # Only for packages and sky store %>
     <% if local_assigns[:sub_title] %>
       <em class="subTitle<%= " colorCode-#{ sub_title.parameterize }" %>">
         <%= sub_title %>
@@ -7,11 +9,14 @@
     <% end %>
 
     <span class="itemTitle">
+      <% # Displaying phone as glyphicon left of the number for visuall impact  %>
+      <%= content_tag(:span, nil,{ class: ['glyphicon', 'glyphicon-phone-alt'], aria: { hidden: "true" } }) if local_assigns[:call_duration]  %>
       <%= title %>
     </span>
 
+    <% # Only for call charges  %>
     <% if local_assigns[:call_duration] %>
-      <em><%= call_duration %></em>
+      | <em><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> <%= call_duration %></em>
     <% end %>
 
     <span class="right bold amount"><%= amount %></span>
