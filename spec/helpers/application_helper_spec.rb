@@ -29,8 +29,8 @@ RSpec.describe ApplicationHelper, type: :helper do
 
   describe "#ltime" do
     context "with invalid argument" do
-      ['', nil, false, ''].each do |invalid_value|
-        it "ltime(#{ invalid_value }) returns nil: nil" do
+      ['', nil, false].each do |invalid_value|
+        it "ltime(#{ invalid_value ==  '' ? "''" : invalid_value.class.to_s.sub('Class', '') }) returns nil: nil" do
           expect(helper.ltime(invalid_value)).to be_nil
         end
       end
