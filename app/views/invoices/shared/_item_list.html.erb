@@ -9,7 +9,7 @@
     <% end %>
 
     <span class="itemTitle">
-      <% # Displaying phone as glyphicon left of the number for visuall impact  %>
+      <% # Displaying a glyphicon phone left of the number for visual impact  %>
       <%= content_tag(:span, nil,{ class: ['glyphicon', 'glyphicon-phone-alt'], aria: { hidden: "true" } }) if local_assigns[:call_duration]  %>
       <%= title %>
     </span>

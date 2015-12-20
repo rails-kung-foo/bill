@@ -1,11 +1,11 @@
 class CustomersBill
+  SKY_BILLING_URI = 'http://safe-plains-5453.herokuapp.com/'
+
   attr_reader :billing_file
 
   def initialize(args={})
     @billing_file = args[:billing_file] || 'bill.json'
   end
-
-  SKY_BILLING_URI = 'http://safe-plains-5453.herokuapp.com/'
 
   def get_bill
     http_get_request
@@ -13,7 +13,7 @@ class CustomersBill
 
   private
 
-  # Build URL to customers bill which takes a param to get a different bill
+  # Build URL to customers bill.
   def billing_url
     "#{ SKY_BILLING_URI }#{ billing_file }"
   end
@@ -23,7 +23,7 @@ class CustomersBill
     uri_scheme == 'https'
   end
 
-  # Prepare and request file/data from ressource
+  # Prepare and request file/data from resource
   def http_get_request
     # prepare URI
     uri = URI.parse(billing_url)
