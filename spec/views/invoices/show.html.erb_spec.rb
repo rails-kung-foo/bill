@@ -40,7 +40,7 @@ RSpec.describe "invoices/show", :type => :view do
     end
 
     # We scaning for the class glyphicon-phone-alt and count it to compare it with the test file
-    it "has the right quantity of made calls: #{ @test_file['callCharges']['calls'].count }" do
+    it "has the correct quantity of made calls: #{ @test_file['callCharges']['calls'].count }" do
       assigne_test_json
       expect(rendered.scan(/glyphicon-phone-alt/).count).to eq assigne_test_json['callCharges']['calls'].count
     end
@@ -57,7 +57,7 @@ RSpec.describe "invoices/show", :type => :view do
     # Checks for titles of skyStore
     @test_file['skyStore'].reject{ |item| item == 'total' }.values.flatten.map{ |item| item['title'] }
     .each do |title|
-      it "has the SkyStore titel: #{ title }" do
+      it "has the Sky Store titel: #{ title }" do
         expect(rendered).to match CGI.escapeHTML(title)
       end
     end
