@@ -83,7 +83,7 @@ RSpec.describe InvoicesController, type: :controller do
 
       context "instance variable @invoice_json" do
         it "is not set and returns: nil" do
-          expect(assigns(:invoice_json)).to be nil
+          expect(assigns(:invoice_json)).to be_nil
         end
       end
     end
