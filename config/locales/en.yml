@@ -27,6 +27,9 @@ en:
       bill_details: "Your bill for the period: %{from} - %{to}"
       total_bill_cost: Your Total cost is
       something_went_wrong: Something went wrong
+    test:
+      page_title: Test Page
+
   product_types:
     rentals: Rentals
     buyAndKeep: Buy and Keep
