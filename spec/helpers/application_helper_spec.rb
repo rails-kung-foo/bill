@@ -12,7 +12,7 @@ require 'rails_helper'
 # end
 RSpec.describe ApplicationHelper, type: :helper do
   describe "#display_page_title" do
-    it "displays for the controller the page titel: 'Test Page'" do
+    it "displays the page title for the controller: 'Test Page'" do
       expect(helper.display_page_title).to eq 'Test Page'
     end
   end
@@ -47,11 +47,11 @@ RSpec.describe ApplicationHelper, type: :helper do
         expect(helper.ltime(@date, format: :date)).to eq '20/12/2015'
       end
 
-      it "ltime('2015-12-20 10:30:30 +0000', format: :time) returns date: '10:30'" do
+      it "ltime('2015-12-20 10:30:30 +0000', format: :time) returns time: '10:30'" do
         expect(helper.ltime(@time_string, format: :time)).to eq '10:30'
       end
 
-      it "ltime(Time.parse('2015-12-20 10:30:30 +0000'), format: :datetime) returns date: '20/12/2015 10:30'" do
+      it "ltime(Time.parse('2015-12-20 10:30:30 +0000'), format: :datetime) returns datetime: '20/12/2015 10:30'" do
         expect(helper.ltime(@time_new, format: :datetime)).to eq '20/12/2015 10:30'
       end
     end

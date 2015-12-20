@@ -24,7 +24,7 @@ RSpec.describe CustomersBill do
       expect(new_customer_bill.billing_file).to eq 'bill.json'
     end
 
-    it "#billing_url returns sky billing URI with the default bill: http://safe-plains-5453.herokuapp.com/..." do
+    it "#billing_url returns sky billing URI with the default billing_file: http://safe-plains-5453.herokuapp.com/..." do
       expect(new_customer_bill.send(:billing_url)).to eq "http://safe-plains-5453.herokuapp.com/#{ new_customer_bill.billing_file }"
     end
 
