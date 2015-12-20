@@ -17,9 +17,10 @@ module InvoicesHelper
     number_to_currency(number.to_f, { unit: '£' })
   end
 
-  # Removes the attribute total from a product. Used in partial skyStore to allow include future products
+  # Removes the attribute 'total' from a array with products. Used in partial for skyStore
+  # to include future products type
   def reject_total(array)
-    array.reject{ |string| string == 'total' }
+    array.reject { |string| string == 'total' }
   end
 
   # Check if string/key is part of sky product type

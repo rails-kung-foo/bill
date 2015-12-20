@@ -19,15 +19,14 @@ require 'rails_helper'
 # that an instance is receiving a specific message.
 
 RSpec.describe InvoicesController, type: :controller do
-  let(:create_invoice){ CustomersBill.new.get_bill }
-  let(:create_invoice_json){ JSON.parse(create_invoice.body) }
-  let(:invalid_json_file){ 'invalid.json' }
+  let(:create_invoice) { CustomersBill.new.get_bill }
+  let(:create_invoice_json) { JSON.parse(create_invoice.body) }
+  let(:invalid_json_file) { 'invalid.json' }
 
   describe "GET #show" do
     context "with a valid resources" do
       before :each do
         create_invoice
-        create_invoice_json
         get :show
       end
 
@@ -51,6 +50,7 @@ RSpec.describe InvoicesController, type: :controller do
 
       context "instance variable @invoice_json" do
         it "has the requested bills body assigned" do
+          create_invoice_json
           expect(assigns(:invoice_json)).to eq create_invoice_json
         end
       end

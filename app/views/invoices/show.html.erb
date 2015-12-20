@@ -1,7 +1,6 @@
 <div class="mainTitle">
   <%= t('layouts.invoices.main_titel') %>
 </div>
-
 <hr />
 
 <% if @invoice.code == '200' %>
@@ -9,8 +8,7 @@
     <div class="row">
       <div class="col-md-6 detailBox">
         <div class="detailBoxContent">
-          <p>
-            <%= display_bill_period %></p>
+          <p><%= display_bill_period %></p>
           <p>
             <%= t('layouts.invoices.total_bill_cost') %>
             <strong><%= total_to_currency %></strong>

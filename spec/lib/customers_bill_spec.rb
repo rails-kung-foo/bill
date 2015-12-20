@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe CustomersBill do
-  let(:new_customer_bill){ CustomersBill.new }
-  let(:invalid_argument){ CustomersBill.new(billing_file: 'invalid.json') }
-  let(:valid_bill_json){ JSON.parse(File.read("spec/fixtures/valid_bill.json")) }
+  let(:new_customer_bill) { CustomersBill.new }
+  let(:invalid_argument) { CustomersBill.new(billing_file: 'invalid.json') }
+  let(:valid_bill_json) { JSON.parse(File.read("spec/fixtures/valid_bill.json")) }
 
   describe "Constants" do
     it "SKY_BILLING_URI has the URI: 'http://safe-plains-5453.herokuapp.com/'" do
@@ -17,7 +17,7 @@ RSpec.describe CustomersBill do
     end
 
     it "raise not an ArgumentError" do
-      expect{ CustomersBill.new }.not_to raise_error(ArgumentError)
+      expect { CustomersBill.new }.not_to raise_error(ArgumentError)
     end
 
     it ".billing_file has the default value: 'bill.json'" do
