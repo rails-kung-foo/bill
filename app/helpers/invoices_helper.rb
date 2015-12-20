@@ -9,15 +9,15 @@ module InvoicesHelper
 
   # Formats billing total amount
   def total_to_currency
-    number_to_currency(@invoice_json['total'])
+    amount_to_currency(@invoice_json['total'])
   end
 
   # Formats amount to currency
   def amount_to_currency(number)
-    number_to_currency(number.to_i, { unit: '£' })
+    number_to_currency(number.to_f, { unit: '£' })
   end
 
-  # Removes the attribute total from a product. Used for sky store partial
+  # Removes the attribute total from a product. Used in partial skyStore to allow include future products
   def reject_total(array)
     array.reject{ |string| string == 'total' }
   end
