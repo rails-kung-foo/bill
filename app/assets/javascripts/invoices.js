@@ -11,7 +11,6 @@ $(function() {
 
   toggleSlideEffect.on('click', function(){
     var $this = $(this);
-    $this.children('.toggleSlideTarget').stop().slideToggle()
-    .end.blur();
+    $this.children('.toggleSlideTarget').stop().slideToggle();
   });
 });
