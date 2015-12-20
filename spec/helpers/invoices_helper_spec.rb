@@ -13,7 +13,6 @@ require 'rails_helper'
 RSpec.describe InvoicesHelper, type: :helper do
   let(:assigne_invoice_json){ assign(:invoice_json, JSON.parse(File.read("spec/fixtures/valid_bill.json"))) }
 
-
   describe "#display_bill_period" do
     it "returns text with bills dates: 'Your bill for the period: 26/01/2015 - 25/02/2015'" do
       assigne_invoice_json
@@ -63,7 +62,4 @@ RSpec.describe InvoicesHelper, type: :helper do
       end
     end
   end
-
-
-
 end

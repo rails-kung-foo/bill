@@ -23,7 +23,6 @@ RSpec.describe InvoicesController, type: :controller do
   let(:create_invoice_json){ JSON.parse(create_invoice.body) }
   let(:invalid_json_file){ 'invalid.json' }
 
-
   describe "GET #show" do
     context "with a valid resources" do
       before :each do

@@ -55,8 +55,5 @@ RSpec.describe ApplicationHelper, type: :helper do
         expect(helper.ltime(@time_new, format: :datetime)).to eq '20/12/2015 10:30'
       end
     end
-
-
-
   end
 end
