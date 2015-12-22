@@ -1,7 +1,7 @@
 # Bill
 Bill is a single page app that displays the customer invoice.
 
-It is crafted and hand-coded with Ruby and Ruby on Rails.
+It is crafted and hand-coded with Ruby(2.1.6p336) and Ruby on Rails(4.2.3).
 
 ### How it works
 Bill requests from an endpoint a JSON file and displays it to the user.
